@@ -1,0 +1,6 @@
+{
+	"rulesDirectory": "./rules",
+	"rules": {
+		"no-use-sparingly": true
+	}
+}
