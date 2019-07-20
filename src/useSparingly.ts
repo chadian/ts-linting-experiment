@@ -5,4 +5,5 @@ export default function useSparingly():Number {
   return count;
 }
 
-console.log(useSparingly());
+useSparingly();
+console.log(`We've used useSparingly ${count} times`);
