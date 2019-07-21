@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chad Carbert <chad.carbert@kloeckner.com>",
+  "author": "Chad Carbert <chadcarbert@me.com>",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.11.3",
