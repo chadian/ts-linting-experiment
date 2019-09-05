@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && tslint --project . src/index.ts"
+    "test": "tsc && tslint --project ."
   },
   "author": "Chad Carbert <chadcarbert@me.com>",
   "license": "ISC",
