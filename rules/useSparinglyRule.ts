@@ -5,7 +5,7 @@ export class Rule extends maxUsageRule({
   ruleName: 'use-sparingly',
   maxCallCount: 4,
   matchesImportSignature: (path: string, exportedName: string) => {
-    let trackedPath = resolve(__dirname, '../src', 'useSparingly');
+    let trackedPath = resolve(__dirname, '../src', 'someCrazyImplementation');
     let trackedExportName = 'default';
 
     // path is including double-quotes from symbol so
