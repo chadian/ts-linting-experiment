@@ -2,7 +2,7 @@ import * as Lint from "tslint";
 import * as ts from "typescript";
 import { isCallExpression } from 'tsutils';
 
-export default function ruleWithMaxUsage({ ruleName, callCount: maxCallCount, matchesImportSignature }: { ruleName: String, callCount: Number, matchesImportSignature: (path: string, exportedName: string) => Boolean }) {
+export default function ruleWithMaxUsage({ ruleName, maxCallCount, matchesImportSignature }: { ruleName: String, maxCallCount: Number, matchesImportSignature: (path: string, exportedName: string) => Boolean }) {
   let incrementerFactory = (initialCount = 0) => () => (++initialCount);
   let matchingIncrementer = incrementerFactory();
 
@@ -29,7 +29,7 @@ export default function ruleWithMaxUsage({ ruleName, callCount: maxCallCount, ma
 
           if (matchesWatchedImport) {
             var currentCount = matchingIncrementer();
-            console.log(`Tracked usage against ${ruleName}, current usage is at: ` + currentCount);
+            console.log(`Rule has tracked usage against ${ruleName}, current usage is at: ` + currentCount);
 
             if (currentCount > maxCallCount) {
               return ctx.addFailureAtNode(node, Rule.FAILURE_STRING);
